@@ -1,0 +1,44 @@
+{
+    "_id": "692dbb9f5707016e157aaabf",
+    "name": "Hello World Resource",
+    "description": "",
+    "schema": {
+        "$id": "hello-world-resource",
+        "additionalProperties": true,
+        "description": "Schema defining the possible values within instances of resource model 'Hello World Resource'",
+        "properties": {},
+        "required": [],
+        "type": "object"
+    },
+    "actions": [
+        {
+            "_id": "cd79",
+            "name": "Create",
+            "type": "create"
+        },
+        {
+            "_id": "68a7",
+            "name": "Update",
+            "type": "update"
+        },
+        {
+            "_id": "889c",
+            "name": "Delete",
+            "type": "delete"
+        }
+    ],
+    "created": "2025-12-01T16:00:31.660Z",
+    "createdBy": {
+        "_id": "691f3afd2ca2a59d5274d29d",
+        "firstname": "admin@itential",
+        "provenance": "ldap",
+        "username": "admin@itential"
+    },
+    "lastUpdated": "2025-12-01T21:30:18.579Z",
+    "lastUpdatedBy": {
+        "_id": "691f3afd2ca2a59d5274d29d",
+        "firstname": "admin@itential",
+        "provenance": "ldap",
+        "username": "admin@itential"
+    }
+}

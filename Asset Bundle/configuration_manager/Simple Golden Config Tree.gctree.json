@@ -1,0 +1,75 @@
+{
+    "_id": "69271979c7107bf97b11ddb6",
+    "name": "Simple Golden Config Tree",
+    "treeId": "69271979c7107bf97b11ddb5",
+    "version": "initial",
+    "deviceType": "cisco-ios",
+    "root": {
+        "attributes": {
+            "configId": "69271979c7107bf97b11ddb4",
+            "deviceGroups": [],
+            "devices": [],
+            "export": {
+                "_id": "69271979c7107bf97b11ddb4",
+                "created": "2025-11-26T15:15:04.548Z",
+                "createdBy": "691f3afd2ca2a59d5274d29d",
+                "deviceType": "cisco-ios",
+                "lastUpdated": "2025-11-26T15:15:04.548Z",
+                "lastUpdatedBy": "691f3afd2ca2a59d5274d29d",
+                "lines": [],
+                "template": ""
+            },
+            "remediationWorkflow": null
+        },
+        "children": [
+            {
+                "attributes": {
+                    "configId": "6927197cc7107bf97b11ddb7",
+                    "deviceGroups": [],
+                    "devices": [],
+                    "export": {
+                        "_id": "6927197cc7107bf97b11ddb7",
+                        "created": "2025-11-26T15:15:07.752Z",
+                        "createdBy": "691f3afd2ca2a59d5274d29d",
+                        "deviceType": "cisco-ios",
+                        "lastUpdated": "2025-11-26T15:15:07.752Z",
+                        "lastUpdatedBy": "691f3afd2ca2a59d5274d29d",
+                        "lines": [],
+                        "template": ""
+                    },
+                    "remediationWorkflow": null
+                },
+                "children": [
+                    {
+                        "attributes": {
+                            "configId": "6927197ec7107bf97b11ddb8",
+                            "deviceGroups": [],
+                            "devices": [],
+                            "export": {
+                                "_id": "6927197ec7107bf97b11ddb8",
+                                "created": "2025-11-26T15:15:10.491Z",
+                                "createdBy": "691f3afd2ca2a59d5274d29d",
+                                "deviceType": "cisco-ios",
+                                "lastUpdated": "2025-11-26T15:15:10.491Z",
+                                "lastUpdatedBy": "691f3afd2ca2a59d5274d29d",
+                                "lines": [],
+                                "template": ""
+                            },
+                            "remediationWorkflow": null
+                        },
+                        "children": [],
+                        "name": "node-482"
+                    }
+                ],
+                "name": "node-123"
+            }
+        ],
+        "name": "base"
+    },
+    "created": "2025-11-26T15:15:04.545Z",
+    "createdBy": "691f3afd2ca2a59d5274d29d",
+    "lastUpdated": "2025-11-26T15:15:10.828Z",
+    "lastUpdatedBy": "691f3afd2ca2a59d5274d29d",
+    "variables": {},
+    "tags": []
+}

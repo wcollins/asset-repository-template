@@ -1,0 +1,39 @@
+{
+    "_id": "692718ba356755ba6aa9628e",
+    "name": "Hello World Automation",
+    "description": "",
+    "componentName": "@69271356deb37f6cedaaf8b9: Hello-World",
+    "componentType": "workflows",
+    "gbac": {
+        "write": [],
+        "read": []
+    },
+    "created": "2025-11-26T15:11:54.070Z",
+    "createdBy": "admin@itential",
+    "lastUpdated": "2025-11-26T15:12:04.073Z",
+    "lastUpdatedBy": "admin@itential",
+    "triggers": [
+        {
+            "_id": "692718e2356755ba6aa9628f",
+            "name": "API Trigger",
+            "description": "",
+            "type": "endpoint",
+            "enabled": true,
+            "actionType": "automations",
+            "actionId": "692718ba356755ba6aa9628e",
+            "created": "2025-11-26T15:12:34.909Z",
+            "createdBy": "admin@itential",
+            "lastUpdated": "2025-11-26T15:12:34.909Z",
+            "lastUpdatedBy": "admin@itential",
+            "migrationVersion": 3,
+            "schema": {
+                "additionalProperties": true,
+                "properties": {},
+                "type": "object"
+            },
+            "jst": null,
+            "routeName": "hello-world",
+            "verb": "POST"
+        }
+    ]
+}

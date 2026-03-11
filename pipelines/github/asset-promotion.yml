@@ -1,0 +1,60 @@
+name: Itential Asset Promotion Pipeline
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  deploy-staging:
+    if: contains(github.ref, '-rc')
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install asyncplatform
+        run: |
+          pip install git+https://github.com/Itential/asyncplatform.git
+      - name: Deploy to Staging
+        env:
+          HOST: ${{ secrets.PLATFORM_HOST }}
+          CLIENT_ID: ${{ secrets.PLATFORM_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.PLATFORM_CLIENT_SECRET }}
+          PROJECT_MEMBERS: ${{ vars.PROJECT_MEMBERS }}
+        run: |
+          python .github/scripts/deploy.py Staging
+
+
+  deploy-production:
+    if: startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-rc')
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install asyncplatform
+        run: |
+          pip install git+https://github.com/Itential/asyncplatform.git
+      - name: Deploy to Production
+        env:
+          HOST: ${{ secrets.PLATFORM_HOST }}
+          CLIENT_ID: ${{ secrets.PLATFORM_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.PLATFORM_CLIENT_SECRET }}
+          PROJECT_MEMBERS: ${{ vars.PROJECT_MEMBERS }}
+        run: |
+          python .github/scripts/deploy.py Production
